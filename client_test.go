@@ -26,9 +26,9 @@ import (
 
 	tls "github.com/bogdanfinn/utls"
 
-	. "github.com/bogdanfinn/fhttp"
-	"github.com/bogdanfinn/fhttp/cookiejar"
-	"github.com/bogdanfinn/fhttp/httptest"
+	. "github.com/krakes-dev/fhttp"
+	"github.com/krakes-dev/fhttp/cookiejar"
+	"github.com/krakes-dev/fhttp/httptest"
 )
 
 var robotsTxtHandler = HandlerFunc(func(w ResponseWriter, r *Request) {

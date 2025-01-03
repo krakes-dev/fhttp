@@ -9,9 +9,9 @@ import (
 	"log"
 	"net/url"
 
-	http "github.com/bogdanfinn/fhttp"
-	"github.com/bogdanfinn/fhttp/cookiejar"
-	"github.com/bogdanfinn/fhttp/httptest"
+	http "github.com/krakes-dev/fhttp"
+	"github.com/krakes-dev/fhttp/cookiejar"
+	"github.com/krakes-dev/fhttp/httptest"
 )
 
 func ExampleNew() {
