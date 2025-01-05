@@ -126,11 +126,19 @@ func TestWithCert(t *testing.T) {
 	if err != nil {
 		t.Fatalf(err.Error())
 	}
-	t2.Settings = []http2.Setting{
+
+	settings := []http2.Setting{
 		{ID: http2.SettingMaxConcurrentStreams, Val: 1000},
 		{ID: http2.SettingMaxFrameSize, Val: 16384},
 		{ID: http2.SettingMaxHeaderListSize, Val: 262144},
 	}
+
+	settingsMap := make(map[http2.SettingID]uint32)
+	for _, setting := range settings {
+		settingsMap[setting.ID] = setting.Val
+	}
+
+	t2.Settings = settingsMap
 	t2.InitialWindowSize = 6291456
 	t2.HeaderTableSize = 65536
 	h1t.H2transport = t2
