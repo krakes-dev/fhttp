@@ -957,6 +957,7 @@ func (f *Framer) WriteWindowUpdate(streamID, incr uint32) error {
 	if (incr < 1 || incr > 2147483647) && !f.AllowIllegalWrites {
 		return errors.New("illegal window increment value")
 	}
+	fmt.Println(streamID)
 	if streamID == 0 {
 		f.startWrite(FrameWindowUpdate, 0, streamID)
 		f.writeUint32(incr)
