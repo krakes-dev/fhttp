@@ -842,6 +842,8 @@ func (t *Transport) newClientConn(c net.Conn, addr string, singleUse bool) (*Cli
 	cc.bw.Write(clientPreface)
 	cc.fr.WriteSettings(initialSettings...)
 
+	fmt.Println("nega black")
+
 	cc.fr.WriteWindowUpdate(0, t.ConnectionFlow)
 
 	for _, priority := range t.Priorities {
