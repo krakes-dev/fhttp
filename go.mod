@@ -1,4 +1,4 @@
-module github.com/bogdanfinn/fhttp
+module github.com/krakes-dev/fhttp
 
 go 1.22.0
 
@@ -6,7 +6,6 @@ require (
 	github.com/andybalholm/brotli v1.1.1
 	github.com/bogdanfinn/utls v1.6.3
 	github.com/klauspost/compress v1.17.11
-	github.com/krakes-dev/fhttp v1.0.0
 	golang.org/x/net v0.33.0
 	golang.org/x/term v0.27.0
 )

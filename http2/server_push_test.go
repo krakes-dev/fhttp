@@ -15,7 +15,7 @@ import (
 	"testing"
 	"time"
 
-	http "github.com/bogdanfinn/fhttp"
+	http "github.com/krakes-dev/fhttp"
 )
 
 func TestServer_Push_Success(t *testing.T) {

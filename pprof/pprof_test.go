@@ -16,9 +16,9 @@ import (
 	"testing"
 	"time"
 
-	http "github.com/bogdanfinn/fhttp"
-	"github.com/bogdanfinn/fhttp/httptest"
-	"github.com/bogdanfinn/fhttp/internal/profile"
+	http "github.com/krakes-dev/fhttp"
+	"github.com/krakes-dev/fhttp/httptest"
+	"github.com/krakes-dev/fhttp/internal/profile"
 )
 
 // TestDescriptions checks that the profile names under runtime/pprof package
