@@ -2244,8 +2244,10 @@ func (sc *serverConn) sendWindowUpdate(st *stream, n int) {
 	// A Go Read call on 64-bit machines could in theory read
 	// a larger Read than this. Very unlikely, but we handle it here
 	// rather than elsewhere for now.
+	fmt.Println("just being sure")
+	fmt.Println(st.id)
 	const maxUint31 = 1<<31 - 1
-	for n >= maxUint31 {
+	for n > maxUint31 {
 		sc.sendWindowUpdate32(st, maxUint31)
 		n -= maxUint31
 	}
